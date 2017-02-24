@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    console.log(formatDate(new Date()));
+
+    function formatDate(d){
+        var year=d.getFullYear();
+        var month=d.getMonth()+1;
+        var date=d.getDate();
+        var hour=d.getHours();
+        var minute=d.getMinutes();
+        var second=d.getSeconds();
+        return year+"-"+sup(+month)+"-"+sup(date)+" "+sup(hour)+":"+sup(minute)+":"+sup(second);
+    }
+
+    function sup(s){
+        return (s+"").length > 1 ? s : '0'+s;
+    }
+</script>
+
+</body>
+</html>
